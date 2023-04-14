@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --gray: rgb(153, 154, 156);
+    --green: rgb(61,125,84);
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: rgb(34,37,41);
+    align-items: center;
+}
+
+nav .navbar .nav_left {
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav_left span .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+nav .navbar .nav_left .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .navbar .nav_left .menu .menu_item a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--gray);
+}
+
+nav .navbar .nav_left .menu .menu_item a.active {
+    color:white;
+}
+
+nav .navbar .nav_left .menu #dropdown button#bottone_drop {
+    border: none;
+    background-color: inherit;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .navbar .nav_left .menu #dropdown button#bottone_drop span {
+    height: 7px;
+    width: 14px;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav_left .menu #dropdown button#bottone_drop span img{
+    height: 100%;
+    width: 100%;
+}
+
+nav .navbar .nav_left .menu #dropdown #content {
+    display: none;
+}
+
+nav .navbar .nav_left .menu #disabled_btn button {
+    background-color: inherit;
+    border: none;
+    color: rgb(89,93,95);
+    font-size: 20px;
+}
+
+nav .navbar .nav_right {
+    height: 100%;
+}
+
+nav .navbar .nav_right .nav_search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .nav_right .nav_search .form_wrapper {
+    height: 100%;
+}
+
+nav .navbar .nav_right .nav_search .form_wrapper form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+nav .navbar .nav_right .nav_search .form_wrapper form input#search {
+    height: 60%;
+    width: 300px;
+    padding-left: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+nav .navbar .nav_right .nav_search .form_wrapper form button#submit {
+    background-color: inherit;
+    border:2px solid var(--green);
+    border-radius: 7px;
+    color:var(--green);
+    font-size: 20px;
+    height: 60%;
+    width: 100px;
+    margin-right:20px;
+    cursor: pointer;
+}
+
+nav .navbar .nav_right .nav_search .hamburger_menu {
+    display: none;
+    background-color: inherit;
+    border: none;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav .navbar .nav_right .nav_search .hamburger_menu img {
+    height: 60px;
+    width: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    nav .navbar .nav_left .menu{
+        display: none;
+    }
+    nav .navbar .nav_right .form_wrapper{
+        display: none;
+    }
+    nav .navbar .nav_right .nav_search button.hamburger_menu {
+        display: initial;
+    }
+}
