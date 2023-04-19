@@ -1,0 +1,66 @@
+#calculator{
+    display: grid;
+    width: 18%;
+    grid-template: 45px 300px/ 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
+}
+
+#calculator #screen {
+    background-color: rgb(57, 67, 72);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#calculator #screen .total{
+    font-size: 30px;
+    color: white;
+}
+
+#calculator #keyboard{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#calculator #keyboard button{
+    background: inherit;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#calculator #keyboard button.operators {
+    background-color: rgb(203, 215, 223);
+    border-right: 2px solid rgb(123, 146, 163);
+    border-bottom: 2px solid rgb(123, 146, 163);
+}
+
+#calculator #keyboard button.operators:nth-child(4) {
+    border-right: none;
+}
+
+#calculator #keyboard button.numbers{
+    background-color: rgb(236, 240, 243);
+    border-right: 2px solid rgb(123, 146, 163);
+    border-bottom: 2px solid rgb(123, 146, 163);
+}
+
+#calculator #keyboard button.numbers:nth-last-child(1){
+    border-bottom: none;
+}
+#calculator #keyboard button.numbers:nth-last-child(2){
+    border-bottom: none;
+}
+#calculator #keyboard button.numbers:nth-last-child(3){
+    border-bottom: none;
+}
+
+#calculator #keyboard button.equal {
+    grid-column: 4/5;
+    grid-row: 2/6;
+    background-color: rgb(255, 101, 110);
+}
